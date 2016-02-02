@@ -18,6 +18,9 @@ public class GameState {
     private Map<Player, TableScore> scores = new HashMap<>();
     private Player currentPlayer;
     private int currentFrame;
+    private int currentBall;
+    private GameStage gameStage;
+    private PlayersRepository repository;
 
     public Player[] getPlayers() {
         return players;
@@ -25,6 +28,10 @@ public class GameState {
 
     public TableScore getTableScore(Player player) {
         return scores.get(player);
+    }
+
+    public TableScore getTableScore(int number) {
+        return scores.get(players[number]);
     }
 
     public Player getCurrentPlayer() {
@@ -43,10 +50,7 @@ public class GameState {
         return gameStage;
     }
 
-    private int currentBall;
-    private GameStage gameStage;
-
-    public GameState(int playersNumber) {
+    public GameState(int playersNumber, PlayersRepository repository) {
         if (playersNumber < 1) {
             throw new IllegalArgumentException("Number of players can't be less than or equal to zero.");
         }
@@ -55,11 +59,10 @@ public class GameState {
             throw new IllegalArgumentException("Number of players can't be more than 8.");
         }
 
+        this.repository = repository;
         players = new Player[playersNumber];
         gameStage = GameStage.SettingUp;
     }
-
-
 
     public GameState addPlayer(Player player) {
         if (gameStage != GameStage.SettingUp || getFreeSlots() == 0) {
@@ -91,14 +94,36 @@ public class GameState {
         }
 
         TableScore tableScore = scores.get(currentPlayer);
+        tableScore.setNextScore(score);
 
-        
+        if (tableScore.getCurrentFrame().getFrameType() == Frame.FrameType.NotCompleted ||
+                currentFrame == 9 && !tableScore.isComplete()) {
+            currentBall++;
+        } else {
+            nextPlayer();
+        }
+
+        if (isComplete()) {
+            gameStage = GameStage.Completed;
+        }
 
         return this;
     }
 
-    private void nextTurn() {
+    public GameState setStrike() {
+        return setScore(10);
+    }
 
+    public GameState setSpare() {
+        if (scores.get(currentPlayer).getCurrentFrame().getFirstBall() == -1) {
+            throw new IllegalArgumentException("Can't set a spare, first ball have to be performed first.");
+        }
+
+        return setScore(10 - scores.get(currentPlayer).getCurrentFrame().getFirstBall());
+    }
+
+    public boolean isComplete() {
+        return scores.values().stream().allMatch(t -> t.isComplete());
     }
 
     private int getFreeSlots() {
@@ -109,5 +134,24 @@ public class GameState {
             }
         }
         return freeSlots;
+    }
+
+    private void nextPlayer() {
+        int index = 0;
+        while (players[index] != currentPlayer) {
+            index++;
+        }
+        if (index == players.length - 1) {
+            index = 0;
+            currentFrame++;
+        } else {
+            index++;
+        }
+        currentBall = 1;
+        currentPlayer = players[index];
+    }
+
+    public int getPlayerHighestScore(int number) {
+        return repository.getHighestScore(players[number]);
     }
 }

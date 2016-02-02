@@ -28,10 +28,6 @@ public class Frame {
     }
 
     private void setFirstBall(int score) {
-        if (firstBall != -1) {
-            throw new IllegalStateException("First ball has been already scored.");
-        }
-
         firstBall = score;
         if (score == 10) {
             secondBall = 0;
@@ -64,5 +60,21 @@ public class Frame {
         }
 
         return FrameType.OpenFrame;
+    }
+
+    public int getFirstBall() {
+        return firstBall;
+    }
+
+    public int getSecondBall() {
+        return secondBall;
+    }
+
+    public int getScore() {
+        if (getFrameType() == FrameType.NotCompleted) {
+            return 0;
+        }
+
+        return firstBall + secondBall;
     }
 }
