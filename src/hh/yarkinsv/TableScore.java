@@ -56,6 +56,10 @@ public class TableScore {
         return player;
     }
 
+    public Frame[] getFrames() {
+        return frames;
+    }
+
     public void setNextScore(int score) {
         if (score < 0 || score > 10) {
             throw new IllegalArgumentException("Score must be between 0 and 10.");

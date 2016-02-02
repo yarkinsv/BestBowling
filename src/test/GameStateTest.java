@@ -1,11 +1,12 @@
 package test;
 
 import hh.yarkinsv.GameState;
-import hh.yarkinsv.JustForFunPlayersRepository;
 import hh.yarkinsv.Player;
+import hh.yarkinsv.PlayersRepository;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.mockito.Mockito.*;
 import static org.junit.Assert.*;
 
 /**
@@ -14,10 +15,14 @@ import static org.junit.Assert.*;
 public class GameStateTest {
 
     GameState game;
+    PlayersRepository repository;
 
     @Before
     public void setUp() throws Exception {
-        game = new GameState(3, new JustForFunPlayersRepository())
+        repository = mock(PlayersRepository.class);
+        when(repository.getHighestScore(any(Player.class))).thenReturn(236);
+
+        game = new GameState(3, repository)
             .addPlayer(new Player("Stas"))
             .addPlayer(new Player("Marina"))
             .addPlayer(new Player("Misha"))
@@ -43,7 +48,7 @@ public class GameStateTest {
 
     @Test(expected = IllegalStateException.class)
     public void testTooManyPlayers() {
-        new GameState(3, new JustForFunPlayersRepository())
+        new GameState(3, repository)
             .addPlayer(new Player("Stas"))
             .addPlayer(new Player("Marina"))
             .addPlayer(new Player("Misha"))
@@ -53,19 +58,19 @@ public class GameStateTest {
 
     @Test(expected = IllegalStateException.class)
     public void testNotEnoughPlayers() {
-        new GameState(3, new JustForFunPlayersRepository())
+        new GameState(3, repository)
             .addPlayer(new Player("Stas"))
             .startGame();
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testZeroPlayers() {
-        new GameState(0, new JustForFunPlayersRepository());
+        new GameState(0, repository);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testTooManyPlayers2() {
-        new GameState(9, new JustForFunPlayersRepository());
+        new GameState(9, repository);
     }
 
     @Test
@@ -118,5 +123,9 @@ public class GameStateTest {
         game.setScore(7);
     }
 
-
+    @Test
+    public void testMockedMethod() {
+        assertEquals(236, game.getPlayerHighestScore(0));
+        verify(repository).getHighestScore(game.getPlayers()[0]);
+    }
 }

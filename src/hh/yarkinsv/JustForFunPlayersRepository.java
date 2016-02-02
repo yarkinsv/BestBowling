@@ -5,6 +5,7 @@ import java.util.Date;
 
 /**
  * Created by RRP-YarkinSV on 02.02.2016.
+ * Только для теста Mock'а!
  */
 public class JustForFunPlayersRepository implements PlayersRepository {
 
