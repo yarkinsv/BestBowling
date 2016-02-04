@@ -70,7 +70,7 @@ public class TableScoreTest {
         tableScore.setNextScore(3);
         tableScore.setNextScore(1);
         tableScore.setNextScore(4);
-        assertEquals(40, tableScore.getTotalScore());
+        assertEquals(30, tableScore.getTotalScore());
     }
 
     @Test

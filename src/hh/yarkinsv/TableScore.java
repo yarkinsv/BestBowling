@@ -5,7 +5,7 @@ package hh.yarkinsv;
  */
 public class TableScore {
     private Player player;
-    private Frame[] frames = new Frame[12];
+    private Frame[] frames = new Frame[10];
     private int currentFrame = 0;
 
     public TableScore(Player player) {
@@ -14,42 +14,55 @@ public class TableScore {
         }
 
         this.player = player;
-        for (int i = 0; i < frames.length; i++) {
+        for (int i = 0; i < 9; i++) {
             frames[i] = new Frame();
         }
+        frames[9] = new FinalFrame();
+    }
+
+    private int getFrameScore(int frameNumber) {
+        Frame frame = frames[frameNumber];
+
+        if (frame.getFrameType() == Frame.FrameType.NotCompleted) {
+            return 0;
+        }
+
+        if (frame instanceof FinalFrame || frames[frameNumber + 1].getFrameType() == Frame.FrameType.NotCompleted) {
+            return frame.getScore();
+        }
+
+        switch (frame.getFrameType()) {
+            case OpenFrame:
+                return frame.getScore();
+            case Spare:
+                return frame.getScore() + frames[frameNumber + 1].getFirstBall();
+            case Strike:
+                if (frames[frameNumber + 1].getFrameType() == Frame.FrameType.Strike) {
+                    if (frames[frameNumber + 1] instanceof FinalFrame) {
+                        return frame.getScore() + frames[frameNumber + 1].getFirstBall() + ((FinalFrame) frames[frameNumber + 1]).getFirstAdditionalBall();
+                    } else if (frames[frameNumber + 2].getFrameType() != Frame.FrameType.NotCompleted) {
+                        return frame.getScore() + 10 + frames[frameNumber + 2].getFirstBall();
+                    } else {
+                        return frame.getScore() + 10;
+                    }
+                } else {
+                    return frame.getScore() + frames[frameNumber + 1].getFirstBall() + frames[frameNumber + 1].getSecondBall();
+                }
+        }
+
+        return 0;
+    }
+
+    public int getCumulativeScore(int num) {
+        int result = 0;
+        for (int i = 0; i < num; i++) {
+            result += getFrameScore(i);
+        }
+        return result;
     }
 
     public int getTotalScore() {
-        int total = 0;
-        for (int i = 0; i < 10; i++) {
-            Frame frame = frames[i];
-
-            if (frame.getFrameType() == Frame.FrameType.NotCompleted) {
-                return total;
-            }
-
-            switch (frame.getFrameType()) {
-                case OpenFrame:
-                    total += frame.getScore();
-                    break;
-                case Strike:
-                    total += frame.getScore();
-                    if (frames[i + 1].getFrameType() != Frame.FrameType.NotCompleted) {
-                        total += frames[i + 1].getScore();
-                    }
-                    if (frames[i + 2].getFrameType() != Frame.FrameType.NotCompleted) {
-                        total += frames[i + 2].getScore();
-                    }
-                    break;
-                case Spare:
-                    total += frame.getScore();
-                    if (frames[i + 1].getFirstBall() > -1) {
-                        total += frames[i + 1].getFirstBall();
-                    }
-                    break;
-            }
-        }
-        return total;
+        return getCumulativeScore(10);
     }
 
     public Player getPlayer() {
@@ -76,25 +89,13 @@ public class TableScore {
     }
 
     public boolean isComplete() {
-        if (currentFrame == 11) {
-            return frames[11].getFrameType() != Frame.FrameType.NotCompleted;
-        }
-
-        if (currentFrame == 10) {
-            if (frames[9].getFrameType() == Frame.FrameType.Strike) {
+        for (Frame frame : frames) {
+            if (frame.getFrameType() == Frame.FrameType.NotCompleted) {
                 return false;
-            } else if (frames[9].getFrameType() == Frame.FrameType.Spare) {
-                return frames[10].getFirstBall() != -1;
-            } else {
-                throw new IllegalStateException("Illegal frames state.");
             }
         }
 
-        if (currentFrame == 9) {
-            return frames[9].getFrameType() == Frame.FrameType.OpenFrame;
-        }
-
-        return false;
+        return true;
     }
 
     public Frame getCurrentFrame() {

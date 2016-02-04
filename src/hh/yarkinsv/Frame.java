@@ -12,8 +12,8 @@ public class Frame {
         Spare
     }
 
-    private int firstBall = -1;
-    private int secondBall = -1;
+    protected int firstBall = -1;
+    protected int secondBall = -1;
 
     public void setScore(int score) {
         if (score < 0 || score > 10) {

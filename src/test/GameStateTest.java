@@ -104,15 +104,14 @@ public class GameStateTest {
             .setScore(0).setScore(5)    //9 frame: Misha
             .setScore(8).setScore(0)    //10 frame: Stas
             .setStrike()                //10 frame: Marina
-            .setScore(8).setScore(0)    //11 frame: Marina
-            .setStrike()                //12 frame: Marina
+            .setScore(8).setScore(0)    //10 frame: Marina
             .setScore(7).setSpare()     //10 frame: Misha
-            .setScore(2);               //11 frame: Misha
+            .setScore(2);               //10 frame: Misha
 
         assertTrue(game.isComplete());
-        assertEquals(103, game.getTableScore(0).getTotalScore()); //Stas
-        assertEquals(149, game.getTableScore(1).getTotalScore()); //Marina - winner!
-        assertEquals(105, game.getTableScore(2).getTotalScore()); //Misha
+        assertEquals(94, game.getTableScore(0).getTotalScore()); //Stas
+        assertEquals(116, game.getTableScore(1).getTotalScore()); //Marina - winner!
+        assertEquals(95, game.getTableScore(2).getTotalScore()); //Misha
     }
 
     @Test(expected = IllegalStateException.class)
