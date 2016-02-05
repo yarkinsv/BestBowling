@@ -7,21 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6dfd8400-2747-401d-b4d4-f2b25fc2e5dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GameTableFrame.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GameTableFrame.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/gui/GameTableFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/gui/TableScoreFrame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/gui/TableScoreFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/gui/GameTableFrame.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/gui/GameTableFrame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/gui/TableScoreFrame.form" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/gui/TableScoreFrame.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/FinalFrame.class" afterPath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/FinalFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/Main.class" afterPath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/Main.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/BestBowling/hh/yarkinsv/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/AbstractLayout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/DimensionInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/GridConstraints.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/GridLayoutManager.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/HorizontalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/LayoutState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/Spacer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/SupportCode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/Util.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/BestBowling/com/intellij/uiDesigner/core/VerticalInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/Main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/BestBowling_jar/BestBowling.jar" afterPath="$PROJECT_DIR$/out/artifacts/BestBowling_jar/BestBowling.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/FinalFrame.java" afterPath="$PROJECT_DIR$/src/hh/yarkinsv/FinalFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hh/yarkinsv/Main.java" afterPath="$PROJECT_DIR$/src/hh/yarkinsv/Main.java" />
     </list>
     <ignored path="BestBowling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +42,7 @@
     <SUITE FILE_PATH="coverage/BestBowling$TableScoreTest_testAllStrikes.coverage" NAME="TableScoreTest.testAllStrikes Coverage Results" MODIFIED="1454493639190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/BestBowling$test_in_BestBowling.coverage" NAME="test in BestBowling Coverage Results" MODIFIED="1454681150457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/BestBowling$test_in_BestBowling.coverage" NAME="test in BestBowling Coverage Results" MODIFIED="1454681977604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>hh.yarkinsv.*</FILTER>
     </SUITE>
   </component>
@@ -62,18 +62,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JPanel.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/javax/swing/JPanel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -109,7 +97,7 @@
       <file leaf-file-name="GameTableFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/GameTableFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.544">
+            <state vertical-scroll-proportion="0.543131">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -260,6 +248,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BestBowling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yarkinsv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -279,7 +309,7 @@
       <recent name="C:\Users\RRP-YarkinSV\IdeaProjects\BestBowling\src\hh\yarkinsv\gui" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.test in BestBowling">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="gui.GameTableFrame" />
@@ -563,8 +593,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.test in BestBowling" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.test in BestBowling" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -582,12 +612,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_in_BestBowling - 2016.02.03 at 13h 51m 35s.xml">
-      <configuration name="test in BestBowling" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_BestBowling - 2016.02.03 at 13h 52m 15s.xml">
-      <configuration name="test in BestBowling" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test_in_BestBowling - 2016.02.03 at 13h 53m 48s.xml">
       <configuration name="test in BestBowling" configurationId="JUnit" />
     </history-entry>
@@ -612,6 +636,12 @@
     <history-entry file="test_in_BestBowling - 2016.02.05 at 17h 08m 00s.xml">
       <configuration name="test in BestBowling" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_in_BestBowling - 2016.02.05 at 17h 19m 36s.xml">
+      <configuration name="test in BestBowling" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_BestBowling - 2016.02.05 at 17h 19m 38s.xml">
+      <configuration name="test in BestBowling" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,8 +653,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -633,17 +663,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30160427" sideWeight="0.60394454" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30160427" sideWeight="0.39605543" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30053475" sideWeight="0.60394454" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30053475" sideWeight="0.39605543" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23423423" sideWeight="0.4981511" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.4954955" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.4954955" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24669836" sideWeight="0.5045045" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993576" sideWeight="0.48720682" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993576" sideWeight="0.48507464" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -734,31 +764,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,16 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Frame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -927,16 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="236" column="15" selection-start-line="236" selection-start-column="15" selection-end-line="236" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,19 +1137,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hh/yarkinsv/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/GameTableFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.544">
+        <state vertical-scroll-proportion="0.543131">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
