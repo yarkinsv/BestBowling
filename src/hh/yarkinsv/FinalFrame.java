@@ -70,11 +70,11 @@ public class FinalFrame extends Frame {
     }
 
     public int getFirstAdditionalBall() {
-        return firstBall;
+        return additionalBall1;
     }
 
     public int getSecondAdditionalBall() {
-        return secondBall;
+        return additionalBall2;
     }
 
     @Override
