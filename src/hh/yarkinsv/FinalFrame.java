@@ -7,12 +7,12 @@ import org.junit.validator.ValidateWith;
  */
 public class FinalFrame extends Frame {
 
-    private int additionalBall1 = -1;
-    private int additionalBall2 = -1;
+    private int additionalBall1 = NAN;
+    private int additionalBall2 = NAN;
 
     @Override
     public void setScore(int score) {
-        if (score < 0 || score > 10) {
+        if (score < 0 || score > MAX_SCORE) {
             throw new IllegalArgumentException("Score must be from 0 to 10");
         }
 
@@ -23,7 +23,7 @@ public class FinalFrame extends Frame {
                 additionalBall2 = 0;
             }
         } else {
-            if (additionalBall1 == -1) {
+            if (additionalBall1 == NAN) {
                 setFirstAdditionalBall(score);
             } else {
                 setSecondAdditionalBall(score);
@@ -47,7 +47,7 @@ public class FinalFrame extends Frame {
             throw new IllegalStateException("Second additional ball is not available for this frame.");
         }
 
-        if (additionalBall2 != -1) {
+        if (additionalBall2 != NAN) {
             throw new IllegalStateException("Second additional ball has been already scored.");
         }
 
@@ -57,11 +57,11 @@ public class FinalFrame extends Frame {
     @Override
     public FrameType getFrameType() {
         if (super.getFrameType() == FrameType.Strike) {
-            if (additionalBall1 == -1 || additionalBall2 == -1) {
+            if (additionalBall1 == NAN || additionalBall2 == NAN) {
                 return FrameType.NotCompleted;
             }
         } else if (super.getFrameType() == FrameType.Spare) {
-            if (additionalBall1 == -1) {
+            if (additionalBall1 == NAN) {
                 return FrameType.NotCompleted;
             }
         }

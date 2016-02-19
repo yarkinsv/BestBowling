@@ -75,6 +75,8 @@ public class TableScoreTest {
 
     @Test
     public void testZeroScore() {
+        tableScore.setNextScore(0);
+        assertEquals(0, tableScore.getCurrentFrame().getFirstBall());
         assertEquals(0, tableScore.getTotalScore());
     }
 

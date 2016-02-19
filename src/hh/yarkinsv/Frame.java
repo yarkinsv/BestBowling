@@ -5,6 +5,9 @@ package hh.yarkinsv;
  */
 public class Frame {
 
+    protected final int NAN = -1;
+    protected final int MAX_SCORE = 10;
+    
     public enum FrameType {
         NotCompleted,
         OpenFrame,
@@ -12,15 +15,15 @@ public class Frame {
         Spare
     }
 
-    protected int firstBall = -1;
-    protected int secondBall = -1;
+    protected int firstBall = NAN;
+    protected int secondBall = NAN;
 
     public void setScore(int score) {
-        if (score < 0 || score > 10) {
-            throw new IllegalArgumentException("Score must be from 0 to 10");
+        if (score < 0 || score > MAX_SCORE) {
+            throw new IllegalArgumentException("Score must be from 0 to MAX_SCORE");
         }
 
-        if (firstBall == -1) {
+        if (firstBall == NAN) {
             setFirstBall(score);
         } else {
             setSecondBall(score);
@@ -29,33 +32,33 @@ public class Frame {
 
     private void setFirstBall(int score) {
         firstBall = score;
-        if (score == 10) {
+        if (score == MAX_SCORE) {
             secondBall = 0;
         }
     }
 
     private void setSecondBall(int score) {
-        if (secondBall != -1) {
+        if (secondBall != NAN) {
             throw new IllegalStateException("Second ball has been already scored.");
         }
 
-        if (firstBall + score > 10) {
-            throw new IllegalArgumentException("Total score can't be more that 10.");
+        if (firstBall + score > MAX_SCORE) {
+            throw new IllegalArgumentException("Total score can't be more that MAX_SCORE.");
         }
 
         secondBall = score;
     }
 
     public FrameType getFrameType() {
-        if (firstBall == -1 || secondBall == -1) {
+        if (firstBall == NAN || secondBall == NAN) {
             return FrameType.NotCompleted;
         }
 
-        if (firstBall == 10) {
+        if (firstBall == MAX_SCORE) {
             return FrameType.Strike;
         }
 
-        if (firstBall + secondBall == 10) {
+        if (firstBall + secondBall == MAX_SCORE) {
             return FrameType.Spare;
         }
 
