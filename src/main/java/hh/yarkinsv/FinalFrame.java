@@ -1,10 +1,5 @@
 package hh.yarkinsv;
 
-import org.junit.validator.ValidateWith;
-
-/**
- * Created by RRP-YarkinSV on 03.02.2016.
- */
 public class FinalFrame extends Frame {
 
     private int additionalBall1 = NAN;
